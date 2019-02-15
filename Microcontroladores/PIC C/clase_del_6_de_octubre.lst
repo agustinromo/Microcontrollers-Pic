@@ -1,0 +1,344 @@
+CCS PCM C Compiler, Version 4.104, 5967               09-dic.-16 18:57
+
+               Filename: F:\documentos\Microcontroladores\PIC C\clase_del_6_de_octubre.lst
+
+               ROM used: 218 words (21%)
+                         Largest free fragment is 806
+               RAM used: 6 (9%) at main() level
+                         8 (12%) worst case
+               Stack:    2 locations
+
+*
+0000:  MOVLW  00
+0001:  MOVWF  0A
+0002:  GOTO   004
+0003:  NOP
+0004:  CALL   3FF
+0005:  BSF    03.5
+0006:  MOVWF  10
+0007:  MOVLW  00
+0008:  MOVWF  0A
+0009:  GOTO   0B9
+.................... //This is a program which works as a counter 
+.................... #include "F:\documentos\Microcontroladores\PIC C\clase_del_6_de_octubre.h" 
+.................... #include <12F675.h> 
+.................... //////// Standard Header file for the PIC12F675 device //////////////// 
+.................... #device PIC12F675 
+.................... #list 
+....................  
+.................... #device adc=8 
+....................  
+.................... #FUSES NOWDT                    //No Watch Dog Timer 
+.................... #FUSES INTRC_IO                 //High speed Osc (> 4mhz for PCM/PCH) (>10mhz for PCD) 
+.................... #FUSES NOCPD                    //No EE protection 
+.................... #FUSES MCLR                     //Master Clear pin used for I/O 
+.................... #FUSES PUT                      //Power Up Timer 
+.................... #FUSES BROWNOUT                 //Reset when brownout detected 
+.................... #FUSES BANDGAP_HIGH    
+.................... #FUSES RESERVED 
+....................  
+.................... #use delay(clock=4000000) 
+*
+002D:  MOVLW  27
+002E:  MOVWF  04
+002F:  MOVF   00,W
+0030:  BTFSC  03.2
+0031:  GOTO   040
+0032:  MOVLW  01
+0033:  MOVWF  21
+0034:  CLRF   20
+0035:  DECFSZ 20,F
+0036:  GOTO   035
+0037:  DECFSZ 21,F
+0038:  GOTO   034
+0039:  MOVLW  4A
+003A:  MOVWF  20
+003B:  DECFSZ 20,F
+003C:  GOTO   03B
+003D:  GOTO   03E
+003E:  DECFSZ 00,F
+003F:  GOTO   032
+0040:  RETURN
+.................... #use rs232(baud=9600,parity=N,xmit=PIN_A3,rcv=PIN_A2,bits=8) 
+....................  
+....................  
+....................   #ZERO_RAM 
+....................    
+.................... void config();  
+.................... void led();   //The context of the program is used as a function 
+.................... int8 boton=0;  //Declaration of the in data, which starts with a 0 as a value   
+.................... int contador;  
+.................... void main()  
+.................... {  
+*
+00B9:  MOVF   03,W
+00BA:  ANDLW  1F
+00BB:  MOVWF  03
+00BC:  MOVLW  3F
+00BD:  MOVWF  20
+00BE:  MOVLW  21
+00BF:  MOVWF  04
+00C0:  BCF    03.7
+00C1:  CLRF   00
+00C2:  INCF   04,F
+00C3:  DECFSZ 20,F
+00C4:  GOTO   0C1
+00C5:  CLRF   20
+00C6:  CLRF   04
+00C7:  MOVLW  1F
+00C8:  ANDWF  03,F
+00C9:  BSF    03.5
+00CA:  BCF    05.3
+00CB:  BCF    03.5
+00CC:  BSF    05.3
+00CD:  CLRF   24
+00CE:  BCF    1F.6
+00CF:  BSF    03.5
+00D0:  BCF    1F.0
+00D1:  BCF    1F.1
+00D2:  BCF    1F.2
+00D3:  BCF    1F.3
+00D4:  MOVLW  07
+00D5:  BCF    03.5
+00D6:  MOVWF  19
+....................    config();  
+00D7:  GOTO   00A
+....................    led();   //Program is calling the function    
+00D8:  GOTO   041
+.................... } 
+.................... void config()  
+.................... { 
+00D9:  SLEEP
+....................  
+....................    setup_adc_ports(NO_ANALOGS|VSS_VDD); 
+*
+000A:  BCF    1F.6
+000B:  BSF    03.5
+000C:  BCF    1F.0
+000D:  BCF    1F.1
+000E:  BCF    1F.2
+000F:  BCF    1F.3
+....................    setup_adc(ADC_CLOCK_DIV_2); 
+0010:  BCF    1F.4
+0011:  BCF    1F.5
+0012:  BCF    1F.6
+0013:  BCF    03.5
+0014:  BCF    1F.7
+0015:  BSF    1F.0
+....................    setup_timer_0(RTCC_INTERNAL|RTCC_DIV_1); 
+0016:  BSF    03.5
+0017:  MOVF   01,W
+0018:  ANDLW  C7
+0019:  IORLW  08
+001A:  MOVWF  01
+....................    setup_timer_1(T1_DISABLED); 
+001B:  BCF    03.5
+001C:  CLRF   10
+....................    setup_comparator(NC_NC); 
+001D:  MOVLW  07
+001E:  MOVWF  19
+001F:  BSF    03.5
+0020:  MOVF   05,W
+0021:  MOVWF  05
+0022:  MOVLW  03
+0023:  BCF    03.5
+0024:  MOVWF  20
+0025:  DECFSZ 20,F
+0026:  GOTO   025
+0027:  MOVF   19,W
+0028:  BCF    0C.3
+....................    setup_vref(FALSE); 
+0029:  BSF    03.5
+002A:  CLRF   19
+....................  
+....................    // TODO: USER CODE!! 
+....................  
+.................... }  
+002B:  BCF    03.5
+002C:  GOTO   0D8 (RETURN)
+.................... void led()  
+.................... {   
+....................    while(TRUE) //while context is TRUE 
+....................    {  
+....................    boton = input(PIN_A4); //pin assignation for 'boton' in the 12f675 pic  
+*
+0041:  BSF    03.5
+0042:  BSF    05.4
+0043:  BCF    03.5
+0044:  CLRF   24
+0045:  BTFSC  05.4
+0046:  INCF   24,F
+....................      if(boton == 1)  
+0047:  DECFSZ 24,W
+0048:  GOTO   07E
+....................       { 
+....................        loop:  
+....................          delay_ms(1000); //one second time pushing the boton 
+0049:  MOVLW  04
+004A:  MOVWF  26
+004B:  MOVLW  FA
+004C:  MOVWF  27
+004D:  CALL   02D
+004E:  DECFSZ 26,F
+004F:  GOTO   04B
+....................          contador++;      //starts to count  
+0050:  INCF   25,F
+....................          boton = input(PIN_A4);  
+0051:  BSF    03.5
+0052:  BSF    05.4
+0053:  BCF    03.5
+0054:  CLRF   24
+0055:  BTFSC  05.4
+0056:  INCF   24,F
+....................           if(boton == 1)  
+0057:  DECFSZ 24,W
+0058:  GOTO   07D
+....................           {  
+....................            goto loop;  
+0059:  GOTO   049
+....................            contador=contador+1; //boton is pushed for one second  
+005A:  MOVLW  01
+005B:  ADDWF  25,F
+....................            boton = input(PIN_A4);  
+005C:  BSF    03.5
+005D:  BSF    05.4
+005E:  BCF    03.5
+005F:  CLRF   24
+0060:  BTFSC  05.4
+0061:  INCF   24,F
+....................             if(boton == 1)  
+0062:  DECFSZ 24,W
+0063:  GOTO   07D
+....................             {   
+....................              goto loop; 
+0064:  GOTO   049
+....................               contador=contador+2; //boton is pushed for two seconds 
+0065:  MOVLW  02
+0066:  ADDWF  25,F
+....................              boton = input(PIN_A4);  
+0067:  BSF    03.5
+0068:  BSF    05.4
+0069:  BCF    03.5
+006A:  CLRF   24
+006B:  BTFSC  05.4
+006C:  INCF   24,F
+....................                if(boton == 1)  
+006D:  DECFSZ 24,W
+006E:  GOTO   07D
+....................                {   
+....................                 goto loop; 
+006F:  GOTO   049
+....................                 contador=contador+3; //boton is pushed for three seconds 
+0070:  MOVLW  03
+0071:  ADDWF  25,F
+....................                  boton = input(PIN_A4);  
+0072:  BSF    03.5
+0073:  BSF    05.4
+0074:  BCF    03.5
+0075:  CLRF   24
+0076:  BTFSC  05.4
+0077:  INCF   24,F
+....................                    if(boton == 1)  
+0078:  DECFSZ 24,W
+0079:  GOTO   07D
+....................                    {   
+....................                     goto loop; 
+007A:  GOTO   049
+....................                       contador=contador+4; //boton is pushed for four seconds 
+007B:  MOVLW  04
+007C:  ADDWF  25,F
+....................                       } 
+....................                      }  
+....................                    }  
+....................           }         
+....................       }  
+....................       else  
+007D:  GOTO   0AF
+....................       {  
+....................       //this is what should happen when boton is pushed for those seconds  
+....................         switch(contador)  
+....................        {  
+007E:  MOVLW  01
+007F:  SUBWF  25,W
+0080:  ADDLW  FC
+0081:  BTFSC  03.0
+0082:  GOTO   0AF
+0083:  ADDLW  04
+0084:  GOTO   0B1
+....................          case 1: output_low(PIN_A0); //led off 
+0085:  BSF    03.5
+0086:  BCF    05.0
+0087:  BCF    03.5
+0088:  BCF    05.0
+....................                  contador=0;   
+0089:  CLRF   25
+....................                  break; 
+008A:  GOTO   0AF
+....................          case 2: while(true) 
+....................                  {  
+....................                  if(input(PIN_A4)){contador=0;break;} 
+008B:  BSF    03.5
+008C:  BSF    05.4
+008D:  BCF    03.5
+008E:  BTFSS  05.4
+008F:  GOTO   092
+0090:  CLRF   25
+0091:  GOTO   0A1
+....................                   output_high(PIN_A0);  
+0092:  BSF    03.5
+0093:  BCF    05.0
+0094:  BCF    03.5
+0095:  BSF    05.0
+....................                   delay_ms(100);  
+0096:  MOVLW  64
+0097:  MOVWF  27
+0098:  CALL   02D
+....................                   output_low(PIN_A0);  
+0099:  BSF    03.5
+009A:  BCF    05.0
+009B:  BCF    03.5
+009C:  BCF    05.0
+....................                   delay_ms(100); 
+009D:  MOVLW  64
+009E:  MOVWF  27
+009F:  CALL   02D
+....................                  }  
+00A0:  GOTO   08B
+....................         
+....................                  contador=0;  
+00A1:  CLRF   25
+....................                  break; 
+00A2:  GOTO   0AF
+....................          case 3: output_high(PIN_A0); //led on 
+00A3:  BSF    03.5
+00A4:  BCF    05.0
+00A5:  BCF    03.5
+00A6:  BSF    05.0
+....................                  contador=0; 
+00A7:  CLRF   25
+....................                  break; 
+00A8:  GOTO   0AF
+....................          case 4: output_low(PIN_A0); //led off  
+00A9:  BSF    03.5
+00AA:  BCF    05.0
+00AB:  BCF    03.5
+00AC:  BCF    05.0
+....................                  contador=0;  
+00AD:  CLRF   25
+....................                  break; 
+00AE:  GOTO   0AF
+....................        } 
+....................      } 
+....................    } 
+00AF:  GOTO   041
+.................... } 
+00B0:  GOTO   0D9 (RETURN)
+....................    
+.................... //if(!input(PIN_A4)){contador=0;break;} 
+....................  
+....................  
+....................  
+....................  
+
+Configuration Fuses:
+   Word  1: 3FE4   NOWDT NOCPD NOPROTECT MCLR PUT INTRC_IO BROWNOUT BANDGAP_HIGH

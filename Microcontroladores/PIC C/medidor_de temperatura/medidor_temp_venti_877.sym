@@ -1,0 +1,132 @@
+004     @WRITE_PROGRAM_MEMORY8.P1
+004-005 @READ_PROGRAM_MEMORY8.P2
+008     lcd
+008     PSP_DATA
+008     lcdlat
+015     CCP_1
+015     CCP_1_LOW
+016     CCP_1_HIGH
+01B     CCP_2_LOW
+01B     CCP_2
+01C     CCP_2_HIGH
+020-023 temperatura
+024-025 @ITOF.P1
+024-027 @FLT.P2
+024     lcd_init.i
+024-027 @PRINTF_L32D_93FPFPF.P1
+024     MAIN.@SCRATCH1
+024     @PSTRINGC7_93.@SCRATCH1
+025     lcd_init.@SCRATCH1
+025     MAIN.@SCRATCH2
+025     @PSTRINGC7_93.@SCRATCH2
+026     @PSTRINGC7_93.@SCRATCH3
+028-02B @FLT.P1
+028     @PRINTF_L32D_93FPFPF.P2
+029     @PRINTF_L32D_93FPFPF.@SCRATCH1
+02A     @PRINTF_L32D_93FPFPF.@SCRATCH2
+02B     @PRINTF_L32D_93FPFPF.@SCRATCH3
+02C     @PRINTF_L32D_93FPFPF.@SCRATCH4
+02C     @FLT.@SCRATCH1
+02D     @PRINTF_L32D_93FPFPF.@SCRATCH5
+02D     @FLT.@SCRATCH2
+02E     @PRINTF_L32D_93FPFPF.@SCRATCH6
+02F     @PRINTF_L32D_93FPFPF.@SCRATCH7
+030     @PRINTF_L32D_93FPFPF.@SCRATCH8
+031-034 @MULFF.P1
+031-034 @DIV3232.P2
+031     lcd_putc.c
+031-034 @FTOSD.P1
+032     @delay_ms1.P1
+032     lcd_gotoxy.x
+033     lcd_gotoxy.y
+034     lcd_gotoxy.address
+035-038 @DIV3232.P1
+035-038 @MULFF.P2
+035     lcd_gotoxy.@SCRATCH1
+035     @FTOSD.@SCRATCH1
+036     lcd_send_byte.address
+037     lcd_send_byte.n
+038     lcd_read_byte.low
+038     lcd_send_byte.@SCRATCH1
+039     lcd_send_nibble.n
+039     lcd_read_byte.high
+039     @MULFF.@SCRATCH1
+039     @DIV3232.@SCRATCH1
+03A     lcd_read_byte.@SCRATCH1
+03A     @MULFF.@SCRATCH2
+03A     @DIV3232.@SCRATCH2
+03B     @MULFF.@SCRATCH3
+03B     @DIV3232.@SCRATCH3
+03C     @MULFF.@SCRATCH4
+03C     @DIV3232.@SCRATCH4
+03D     @MULFF.@SCRATCH5
+03D     @DIV3232.@SCRATCH5
+077     @SCRATCH
+078     @SCRATCH
+078     _RETURN_
+079     @SCRATCH
+07A     @SCRATCH
+088     lcdtris
+09C.6   C1OUT
+09C.7   C2OUT
+10D-10E @WRITE_PROGRAM_MEMORY8.P1
+10D-10E @READ_PROGRAM_MEMORY8.P2
+
+ROM Allocation:
+002B  @delay_ms1
+0004  LCD_INIT_STRING
+0053  lcd_read_byte
+004C  lcd_read_nibble
+0040  lcd_send_nibble
+0052  lcd_send_byte
+008D  lcd_init
+00BB  lcd_gotoxy
+00CD  lcd_putc
+0336  MAIN
+000C  @const102
+00F2  @PSTRINGC7_93
+0138  @ITOF
+01AD  @MULFF
+0233  @FTOSD
+0157  @DIV3232
+0199  @PRINTF_L32D_93FPFPF
+0012  @const118
+02F5  @FLT
+0016  @const122
+0021  @const123
+0336  @cinit
+
+
+User Memory space: 
+
+User Memory space: 
+
+Project Directory:
+    C:\Users\VAIOPC\Documents\ADATA\Microcontroladores\PIC C\medidor_de temperatura\
+
+Project Files:
+    medidor_temp_venti_877.c
+    ..\..\..\..\..\..\..\Program Files\PICC\devices\16f877a.h
+    ..\..\..\..\..\..\..\Program Files\PICC\drivers\lcd.c
+
+Units:
+    C:\Users\VAIOPC\Documents\ADATA\Microcontroladores\PIC C\medidor_de temperatura\medidor_temp_venti_877 (main)
+
+Compiler Settings:
+    Processor:      PIC16F877A
+    Pointer Size:   16
+    ADC Range:      0-1023
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+
+Output Files:
+    Errors:      medidor_temp_venti_877.err
+    Ext Symbols: medidor_temp_venti_877.esym
+    INHX8:       medidor_temp_venti_877.hex
+    Symbols:     medidor_temp_venti_877.sym
+    List:        medidor_temp_venti_877.lst
+    Debug/COFF:  medidor_temp_venti_877.cof
+    Project:     medidor_temp_venti_877.PJT
+    Call Tree:   medidor_temp_venti_877.tre
+    Statistics:  medidor_temp_venti_877.sta

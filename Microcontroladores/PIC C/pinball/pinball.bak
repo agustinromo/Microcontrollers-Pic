@@ -1,0 +1,29 @@
+#include "C:\Users\VAIOPC\Documents\ADATA\Microcontroladores\PIC C\pinball\pinball.h"
+  #ZERO_RAM
+int8 sensor=0;
+void main()
+{ 
+   setup_adc_ports(AN0|VSS_VDD);
+   setup_adc(ADC_CLOCK_DIV_2);
+   setup_timer_0(RTCC_INTERNAL|RTCC_DIV_1);
+   setup_timer_1(T1_DISABLED);
+   setup_comparator(NC_NC);
+   setup_vref(FALSE);
+
+   // TODO: USER CODE!! 
+   while(TRUE) 
+   {
+     sensor = read_adc();
+     if(sensor == 1)
+     {
+       output_bit(PIN_A0, 1); 
+       delay_ms(2000);
+       output_bit(PIN_A0, 0); 
+     } 
+      else
+       {
+         output_bit(PIN_A0, 0);
+       }
+   }
+
+}

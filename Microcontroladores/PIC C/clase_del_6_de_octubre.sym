@@ -1,0 +1,56 @@
+004-005 @READ_PROGRAM_MEMORY8.P1
+019.6   C1OUT
+020     @SCRATCH
+021     @SCRATCH
+021     _RETURN_
+022     @SCRATCH
+023     @SCRATCH
+024     boton
+025     contador
+026     led.@SCRATCH1
+027     @delay_ms1.P1
+09B-09C @READ_PROGRAM_MEMORY8.P1
+
+ROM Allocation:
+002D  @delay_ms1
+00B9  main
+000A  config
+0041  led
+00B1  @goto10144
+00B9  @cinit
+0049  loop
+
+
+User Memory space: 
+
+User Memory space: 
+
+Project Directory:
+    F:\documentos\Microcontroladores\PIC C\
+
+Project Files:
+    clase_del_6_de_octubre.c
+    clase_del_6_de_octubre.h
+    C:\Program Files (x86)\PICC\devices\12F675.h
+
+Units:
+    F:\documentos\Microcontroladores\PIC C\clase_del_6_de_octubre (main)
+
+Compiler Settings:
+    Processor:      PIC12F675
+    Pointer Size:   8
+    ADC Range:      0-255
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+
+Output Files:
+    Errors:      clase_del_6_de_octubre.err
+    Ext Symbols: clase_del_6_de_octubre.esym
+    INHX8:       clase_del_6_de_octubre.hex
+    Symbols:     clase_del_6_de_octubre.sym
+    List:        clase_del_6_de_octubre.lst
+    Debug/COFF:  clase_del_6_de_octubre.cof
+    Project:     clase_del_6_de_octubre.PJT
+    Call Tree:   clase_del_6_de_octubre.tre
+    Statistics:  clase_del_6_de_octubre.sta

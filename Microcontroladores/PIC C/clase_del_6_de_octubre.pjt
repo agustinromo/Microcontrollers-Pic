@@ -1,0 +1,27 @@
+[PROJECT]
+Target=F:\documentos\Microcontroladores\PIC C\clase_del_6_de_octubre.hex
+Development_Mode=
+Processor_Text=PIC12F675
+ToolSuite=CCS
+Processor=0x2675
+[F:\documentos\Microcontroladores\PIC C\clase_del_6_de_octubre]
+Type=4
+Path=
+FileList=
+BuildTool=
+OptionString=
+AdditionalOptionString=
+[mru-list]
+1=F:\documentos\Microcontroladores\PIC C\clase_del_6_de_octubre.c
+[Windows]
+0=0000 %S 0 0 796 451 3 0
+[Units]
+Link=0
+Count=1
+1=F:\documentos\Microcontroladores\PIC C\clase_del_6_de_octubre
+[Opened Files]
+1=..\experimento5\contador_40.c
+2=clase_del_6_de_octubre.c
+3=
+4=clase_del_6_de_octubre.h
+5=

@@ -1,0 +1,51 @@
+004-005 @READ_PROGRAM_MEMORY8.P1
+019.6   C1OUT
+020     @SCRATCH
+021     @SCRATCH
+021     _RETURN_
+022     @SCRATCH
+023     @SCRATCH
+024     sensor
+025     main.@SCRATCH1
+026     @delay_ms1.P1
+09B-09C @READ_PROGRAM_MEMORY8.P1
+
+ROM Allocation:
+000A  @delay_ms1
+001E  main
+001E  @cinit
+
+
+User Memory space: 
+
+User Memory space: 
+
+Project Directory:
+    C:\Users\VAIOPC\Documents\ADATA\Microcontroladores\PIC C\pinball\
+
+Project Files:
+    pinball.c
+    pinball.h
+    ..\..\..\..\..\..\..\Program Files\PICC\devices\12F675.h
+
+Units:
+    C:\Users\VAIOPC\Documents\ADATA\Microcontroladores\PIC C\pinball\pinball (main)
+
+Compiler Settings:
+    Processor:      PIC12F675
+    Pointer Size:   8
+    ADC Range:      0-255
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+
+Output Files:
+    Errors:      pinball.err
+    Ext Symbols: pinball.esym
+    INHX8:       pinball.hex
+    Symbols:     pinball.sym
+    List:        pinball.lst
+    Debug/COFF:  pinball.cof
+    Project:     pinball.PJT
+    Call Tree:   pinball.tre
+    Statistics:  pinball.sta

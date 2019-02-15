@@ -1,0 +1,44 @@
+# include<16f877a.h> 
+# device *=16 
+# device adc=10 
+# use delay(clock=4M) 
+# include <lcd.c> 
+float temperatura; 
+
+void main() 
+{
+ setup_adc_ports(RA0_ANALOG); 
+ setup_adc(ADC_CLOCK_INTERNAL); 
+ setup_COUNTERS(RTCC_internal.rtcc_div_1); 
+ set_adc_channel(0); 
+ 
+  lcd_init(); 
+   lcd_gotoxy(5,1);  
+   printf(lcd_putc,"Temperatura"); 
+   delay_ms(350); 
+   lcd_init(); 
+ while(true) 
+    { 
+    temperatura= read_adc()/2; //grados centigrados
+    lcd_gotoxy(5,1); 
+    printf(lcd_putc,"%f",temperatura); 
+    lcd_gotoxy(14,1); 
+    printf(lcd_putc,"Grados"); 
+    delay_ms(200); 
+    
+    if(temperatura >=23) 
+     { 
+      output_high(PIN_B1); 
+      lcd_gotoxy(5,2);
+      printf(lcd_putc,"Activando Ventilador"); 
+      delay_ms(200);
+     } 
+      else 
+       { 
+        output_low(PIN_B1); 
+         lcd_gotoxy(5,2);
+         printf(lcd_putc,"Esta chido el clima"); 
+         delay_ms(200);
+       }
+   } 
+}

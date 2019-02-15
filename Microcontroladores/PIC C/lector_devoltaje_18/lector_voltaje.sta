@@ -1,0 +1,45 @@
+
+ROM used: 266 (1%)
+          266 (1%) including unused fragments
+
+          1 Average locations per line
+          7 Average locations per statement
+
+RAM used: 5 (0%) at main() level
+          5 (0%) worst case
+
+Stack used: 1 worst case (out of 31 total available)
+
+Lines Stmts  %   Files
+----- ----- ---  -----
+   72    39 100  lector_voltaje.c
+   36     0   0  lector_voltaje.h
+  392     0   0  C:\Program Files (x86)\PICC\devices\18F2550.h
+----- -----
+  500    39 Total
+
+Page ROM  %  RAM   Vol Diff  Functions:
+---- --- --- ---   --- ----  ----------
+0     74  14   0    21  1.0  main
+0     76  14   0   212  2.3  conf
+0    112  21   0   601  3.8  program
+
+Program metrics:
+    Functions               3
+    Statements              39
+    Comments                103
+    Volume (V)              1012
+    Difficilty (D)          7.4
+    Effort to implement (E) 7522
+    Time to implement (T)   7 minutes
+    Est Delivered Bugs (B)  0
+    Cyclomatic Complexity   5
+    Maintainability (MI)    116
+
+ Segment     Used  Free
+-----------  ----  ----
+00000-00002     4  0  
+00004-07FFE   262  32502  
+
+
+

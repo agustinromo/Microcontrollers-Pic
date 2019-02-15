@@ -1,0 +1,44 @@
+
+ROM used: 121 (12%)
+          121 (12%) including unused fragments
+
+          0 Average locations per line
+          8 Average locations per statement
+
+RAM used: 6 (9%) at main() level
+          7 (11%) worst case
+
+Stack used: 1 worst case (out of 8 total available)
+
+Lines Stmts  %   Files
+----- ----- ---  -----
+   30    16 100  pinball.c
+   17     0   0  pinball.h
+  218     0   0  ..\..\..\..\..\..\..\Program Files\PICC\devices\12F675.h
+----- -----
+  265    16 Total
+
+Page ROM  %  RAM   Vol Diff  Functions:
+---- --- --- ---   --- ----  ----------
+0     20  17   1             @delay_ms1
+0     91  75   1   380  4.7  main
+
+Program metrics:
+    Functions               1
+    Statements              16
+    Comments                60
+    Volume (V)              382
+    Difficilty (D)          4.6
+    Effort to implement (E) 1742
+    Time to implement (T)   2 minutes
+    Est Delivered Bugs (B)  0
+    Cyclomatic Complexity   1
+    Maintainability (MI)    68
+
+ Segment     Used  Free
+-----------  ----  ----
+00000-00003     4  0  
+00004-003FF   117  903  
+
+
+

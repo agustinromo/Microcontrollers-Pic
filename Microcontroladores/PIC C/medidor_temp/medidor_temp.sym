@@ -1,0 +1,107 @@
+004-005 @READ_PROGRAM_MEMORY8.P1
+004     @WRITE_PROGRAM_MEMORY8.P2
+008     PSP_DATA
+015     CCP_1
+015     CCP_1_LOW
+016     CCP_1_HIGH
+01B     CCP_2
+01B     CCP_2_LOW
+01C     CCP_2_HIGH
+020     temperatura
+021     @TRIS_C
+022     lcd_init.i
+022     @PRINTF_D_91.P1
+022     MAIN.@SCRATCH1
+022     @PSTRINGC7_91.@SCRATCH1
+023     @PRINTF_D_91.P1
+023     lcd_init.@SCRATCH1
+023     @PSTRINGC7_91.@SCRATCH2
+024     @PSTRINGC7_91.@SCRATCH3
+024     @PRINTF_D_91.@SCRATCH1
+025     @PRINTF_D_91.@SCRATCH2
+026     @PRINTF_D_91.@SCRATCH3
+027     @PRINTF_D_91.@SCRATCH4
+028     lcd_putc.c
+028     @DIV88.P1
+029     @delay_ms1.P1
+029     lcd_gotoxy.x
+029     @DIV88.P1
+02A     lcd_gotoxy.y
+02A     @DIV88.@SCRATCH1
+02B     lcd_gotoxy.address
+02C     lcd_gotoxy.@SCRATCH1
+02D     lcd_send_byte.address
+02E     lcd_send_byte.n
+02F     lcd_read_byte.low
+02F     lcd_send_byte.@SCRATCH1
+030     lcd_send_nibble.n
+030     lcd_read_byte.high
+031     lcd_read_nibble.n
+031     lcd_read_byte.@SCRATCH1
+032     lcd_read_nibble.@SCRATCH1
+077     @SCRATCH
+078     @SCRATCH
+078     _RETURN_
+079     @SCRATCH
+07A     @SCRATCH
+09C.6   C1OUT
+09C.7   C2OUT
+10D-10E @WRITE_PROGRAM_MEMORY8.P1
+10D-10E @READ_PROGRAM_MEMORY8.P2
+
+ROM Allocation:
+002C  @delay_ms1
+0004  LCD_INIT_STRING
+00A0  lcd_read_byte
+006C  lcd_read_nibble
+0041  lcd_send_nibble
+009D  lcd_send_byte
+00F4  lcd_init
+012C  lcd_gotoxy
+013E  lcd_putc
+0225  MAIN
+000C  @const101
+0163  @PSTRINGC7_91
+01A9  @DIV88
+01BE  @PRINTF_D_91
+0012  @const111
+0019  @const112
+001F  @const113
+0026  @const114
+0225  @cinit
+
+
+User Memory space: 
+
+User Memory space: 
+
+Project Directory:
+    C:\Users\VAIOPC\Documents\ADATA\Microcontroladores\PIC C\medidor_temp\
+
+Project Files:
+    medidor_temp.c
+    medidor_temp.h
+    ..\..\..\..\..\..\..\Program Files\PICC\devices\16F877A.h
+    ..\..\..\..\..\..\..\Program Files\PICC\drivers\lcd.c
+
+Units:
+    C:\Users\VAIOPC\Documents\ADATA\Microcontroladores\PIC C\medidor_temp\medidor_temp (main)
+
+Compiler Settings:
+    Processor:      PIC16F877A
+    Pointer Size:   16
+    ADC Range:      0-255
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+
+Output Files:
+    Errors:      medidor_temp.err
+    Ext Symbols: medidor_temp.esym
+    INHX8:       medidor_temp.hex
+    Symbols:     medidor_temp.sym
+    List:        medidor_temp.lst
+    Debug/COFF:  medidor_temp.cof
+    Project:     medidor_temp.PJT
+    Call Tree:   medidor_temp.tre
+    Statistics:  medidor_temp.sta

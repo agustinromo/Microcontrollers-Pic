@@ -1,0 +1,67 @@
+
+ROM used: 1081 (13%)
+          1081 (13%) including unused fragments
+
+          1 Average locations per line
+          11 Average locations per statement
+
+RAM used: 11 (3%) at main() level
+          36 (10%) worst case
+
+Stack used: 5 worst case (out of 8 total available)
+
+Lines Stmts  %   Files
+----- ----- ---  -----
+   51    33  33  temperatura_venti_877a.c
+   17     0   0  temperatura_venti_877a.h
+  326     0   0  C:\Program Files (x86)\PICC\devices\16F877A.h
+  348    67  67  C:\Program Files (x86)\PICC\drivers\lcd.c
+----- -----
+  742   100 Total
+
+Page ROM  %  RAM   Vol Diff  Functions:
+---- --- --- ---   --- ----  ----------
+0     21   2   1             @delay_ms1
+0      8   1   0             @const76
+ Inline        3   587  6.0  lcd_read_byte
+0      6   1   0    59  4.2  lcd_read_nibble
+0     12   1   1   172  3.4  lcd_send_nibble
+0     59   5   3   317  4.3  lcd_send_byte
+0     46   4   2   624  5.8  lcd_init
+0     18   2   4   186  5.5  lcd_gotoxy
+0     37   3   1   272  4.1  lcd_putc
+0    259  24   1   996  5.3  MAIN
+0      6   1   0             @const103
+0     70   6   3             @PSTRINGC7_93
+0     31   3   2             @ITOF
+ Inline       13             @MULFF
+ Inline        5             @FTOSD
+0     66   6  13             @DIV3232
+0    348  32  13             @PRINTF_L32D_93FPFPF
+0      4   0   0             @const119
+0     65   6  10             @FLT
+0     11   1   0             @const123
+0     10   1   0             @const124
+
+Program metrics:
+    Functions               8
+    Statements              100
+    Comments                156
+    Volume (V)              4820
+    Difficilty (D)          36.0
+    Effort to implement (E) 173327
+    Time to implement (T)   2 hours, 40 minutes
+    Est Delivered Bugs (B)  1
+    Cyclomatic Complexity   8
+    Maintainability (MI)    123
+
+ Segment     Used  Free
+-----------  ----  ----
+00000-00003     4  0  
+00004-007FF  1077  967  
+00800-00FFF     0  2048  
+01000-017FF     0  2048  
+01800-01FFF     0  2048  
+
+
+

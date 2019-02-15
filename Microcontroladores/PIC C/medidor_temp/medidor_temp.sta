@@ -1,0 +1,64 @@
+
+ROM used: 827 (10%)
+          827 (10%) including unused fragments
+
+          1 Average locations per line
+          6 Average locations per statement
+
+RAM used: 8 (2%) at main() level
+          24 (7%) worst case
+
+Stack used: 5 worst case (out of 8 total available)
+
+Lines Stmts  %   Files
+----- ----- ---  -----
+   63    46  36  medidor_temp.c
+   25     0   0  medidor_temp.h
+  326     0   0  ..\..\..\..\..\..\..\Program Files\PICC\devices\16F877A.h
+  348    83  64  ..\..\..\..\..\..\..\Program Files\PICC\drivers\lcd.c
+----- -----
+  762   129 Total
+
+Page ROM  %  RAM   Vol Diff  Functions:
+---- --- --- ---   --- ----  ----------
+0     21   3   1             @delay_ms1
+0      8   1   0   212  2.3  @const73
+ Inline        3   751  4.5  lcd_read_byte
+0     49   6   2   254  3.7  lcd_read_nibble
+0     43   5   1   391  2.4  lcd_send_nibble
+0     87  11   3   313  3.4  lcd_send_byte
+0     56   7   2   660  4.9  lcd_init
+0     18   2   4   186  5.5  lcd_gotoxy
+0     37   4   1   272  4.1  lcd_putc
+0    278  34   1  1532  5.8  MAIN
+0      6   1   0             @const101
+0     70   8   3             @PSTRINGC7_91
+0     21   3   3             @DIV88
+0    103  12   6             @PRINTF_D_91
+0      7   1   0             @const111
+0      6   1   0             @const112
+0      7   1   0             @const113
+0      6   1   0             @const114
+
+Program metrics:
+    Functions               9
+    Statements              129
+    Comments                162
+    Volume (V)              6860
+    Difficilty (D)          35.8
+    Effort to implement (E) 245826
+    Time to implement (T)   3 hours, 48 minutes
+    Est Delivered Bugs (B)  1
+    Cyclomatic Complexity   11
+    Maintainability (MI)    107
+
+ Segment     Used  Free
+-----------  ----  ----
+00000-00003     4  0  
+00004-007FF   823  1221  
+00800-00FFF     0  2048  
+01000-017FF     0  2048  
+01800-01FFF     0  2048  
+
+
+

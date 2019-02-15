@@ -1,0 +1,47 @@
+
+ROM used: 218 (21%)
+          218 (21%) including unused fragments
+
+          1 Average locations per line
+          4 Average locations per statement
+
+RAM used: 6 (9%) at main() level
+          8 (12%) worst case
+
+Stack used: 2 worst case (out of 8 total available)
+
+Lines Stmts  %   Files
+----- ----- ---  -----
+   97    59 100  clase_del_6_de_octubre.c
+   16     0   0  clase_del_6_de_octubre.h
+  218     0   0  C:\Program Files (x86)\PICC\devices\12F675.h
+----- -----
+  331    59 Total
+
+Page ROM  %  RAM   Vol Diff  Functions:
+---- --- --- ---   --- ----  ----------
+0     20   9   1             @delay_ms1
+0     33  15   0    21  1.0  main
+0     35  16   0   130  1.8  config
+0    112  51   1  1294  7.3  led
+0      8   4   0             @goto10144
+
+Program metrics:
+    Functions               3
+    Statements              59
+    Comments                79
+    Volume (V)              1631
+    Difficilty (D)          10.2
+    Effort to implement (E) 16703
+    Time to implement (T)   15 minutes
+    Est Delivered Bugs (B)  0
+    Cyclomatic Complexity   10
+    Maintainability (MI)    139
+
+ Segment     Used  Free
+-----------  ----  ----
+00000-00003     4  0  
+00004-003FF   214  806  
+
+
+

@@ -1,0 +1,27 @@
+[PROJECT]
+Target=C:\Users\VAIOPC\Documents\ADATA\Microcontroladores\PIC C\pinball\pinball.hex
+Development_Mode=
+Processor_Text=PIC12F675
+ToolSuite=CCS
+Processor=0x2675
+[C:\Users\VAIOPC\Documents\ADATA\Microcontroladores\PIC C\pinball\pinball]
+Type=4
+Path=
+FileList=
+BuildTool=
+OptionString=
+AdditionalOptionString=
+[mru-list]
+1=C:\Users\VAIOPC\Documents\ADATA\Microcontroladores\PIC C\pinball\pinball.c
+[Windows]
+0=0000 %S 0 0 796 451 3 0
+[Units]
+Link=0
+Count=1
+1=C:\Users\VAIOPC\Documents\ADATA\Microcontroladores\PIC C\pinball\pinball
+[Opened Files]
+1=pinball.c
+2=
+3=
+4=..\prendete_puto.c
+5=

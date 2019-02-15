@@ -1,0 +1,26 @@
+[PROJECT]
+Target=F:\documentos\Microcontroladores\PIC C\medidor_de temperatura\temperatura_venti_877a.hex
+Development_Mode=
+Processor_Text=PIC16F877A
+ToolSuite=CCS
+Processor=0x877A
+[F:\documentos\Microcontroladores\PIC C\medidor_de temperatura\temperatura_venti_877a]
+Type=4
+Path=
+FileList=
+BuildTool=
+OptionString=
+AdditionalOptionString=
+[mru-list]
+1=F:\documentos\Microcontroladores\PIC C\medidor_de temperatura\temperatura_venti_877a.c
+[Windows]
+0=0000 %S 0 0 796 451 3 0
+[Units]
+Link=0
+Count=1
+1=F:\documentos\Microcontroladores\PIC C\medidor_de temperatura\temperatura_venti_877a
+[Opened Files]
+1=temperatura_venti_877a.c
+2=
+3=
+4=
